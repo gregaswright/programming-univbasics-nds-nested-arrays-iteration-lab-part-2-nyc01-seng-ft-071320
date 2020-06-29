@@ -4,4 +4,5 @@ def find_min_in_nested_arrays(src)
     src[row_index].sort!
     row_index += 1
   end
+  src
 end
