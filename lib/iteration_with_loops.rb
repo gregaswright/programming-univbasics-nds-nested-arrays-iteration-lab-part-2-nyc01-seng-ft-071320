@@ -5,11 +5,14 @@ def find_min_in_nested_arrays(src)
   while row_index < src.count do
     element_index = 0
     while element_index < src[row_index].count do
-      lowest_result << src[row_index][element_index][0]
+      if src[row_index][element_index][0]
+        lowest_result << src[row_index][element_index][0]
+      end
+      element_index += 1
     end
-    element_index += 1
+    row_index += 1
   end
-  row_index += 1
+  lowest_result
 end
 
-lowest_result
+
